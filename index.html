@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
+  <meta charset="utf-8">
   <title>Ada Lovelace Vivian Alt</title>
   <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -127,9 +129,20 @@
     <input id="email" type="email">
     <label for="telefone">Telefone:</label>
     <input id="telefone" type="number">
-    <button id="botaoEnviar">Enviar</button>
+    <button type="button" onclick="validaFormulario()">Enviar</button>
   </form>
-  <script type="text/javascript" scr="js/script.js"></script>
+
+  <script>
+ function validaFormulario(){
+   if (document.getElementById("nome").value != "" &&
+     document.getElementById("email").value != "" &&
+     document.getElementById("telefone").value != "") {
+     alert("Prontinho! você receberá as novidades por email.")
+   }else{
+     alert("Por favor, preencha os campos nome, email e telefone.")
+   }
+ }
+  </script>
 </body>
 
 </html>
